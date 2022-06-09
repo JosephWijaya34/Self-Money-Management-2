@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
 
         //function splash screen
         showLogin()
+        //gg
     }
 
     private fun showLogin(){
