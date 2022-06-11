@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun showLogin(){
         Handler(Looper.getMainLooper()).postDelayed({
-            val die = Intent(this, loginActivity::class.java)
+            val die = Intent(this, homeActivity::class.java)
             die.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(die)
         }, 3000)

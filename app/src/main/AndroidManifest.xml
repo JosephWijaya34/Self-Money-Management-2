@@ -17,10 +17,7 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".sigUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".loginActivity"
@@ -37,9 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

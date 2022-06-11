@@ -44,26 +44,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/button"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="36dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Daftar"
-        android:textColor="#000000"
+        app:cardCornerRadius="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <Button
-        android:id="@+id/button2"
+        <Button
+            android:id="@+id/gotoregister_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Daftar"
+            android:textColor="#000000"
+            app:cornerRadius="0dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="56dp"
-        android:backgroundTint="#3B3A41"
-        android:text="Masuk"
+        android:layout_marginEnd="96dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/gotologin_button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#3B3A41"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Masuk" />
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

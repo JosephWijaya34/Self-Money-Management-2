@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/drawable/rounded_button_left.xml" value="0.1895" />
+        <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1875" />
+        <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_test2.xml" value="0.1875" />
         <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/drawable/bloob_background.xml" value="0.387" />
