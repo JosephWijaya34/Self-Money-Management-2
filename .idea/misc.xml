@@ -3,12 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
-        <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1875" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Android Studio/SMM2_FinalProject/app/src/main/res/layout/activity_test2.xml" value="0.1875" />
-
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/drawable/bloob_background.xml" value="0.387" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/drawable/bloob_foreground.xml" value="0.387" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/drawable/custom_input.xml" value="0.387" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/drawable/ilustrasihome.xml" value="0.387" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_main2.xml" value="0.38697916666666665" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_sig_up.xml" value="0.38697916666666665" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Program/RXCODE/Bahasa/Android/1Project/SMM2/app/src/main/res/layout/activity_splash.xml" value="0.4" />
       </map>
     </option>
   </component>
