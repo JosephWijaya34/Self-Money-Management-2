@@ -34,6 +34,7 @@ class loginActivity : AppCompatActivity() {
             val email=viewBind.namaLoginTextInputLayout.editText?.text!!.toString().trim()
             val password=viewBind.passwordLoginTextInputLayout.editText?.text!!.toString().trim()
             var check=false
+            var ind = 0
 
             for (item in arrayListUser.users) {
                 if (item.email == email && item.password == password) {
@@ -41,8 +42,10 @@ class loginActivity : AppCompatActivity() {
                     check=true
                     break
                 }
+                ind++
             }
             if (check == true) {
+                arrayListUser.indexUser = ind
                 val intent=Intent(this, MainActivity::class.java)
                 intent.putExtra("user", user)
                 Toast.makeText(this, "Welcome, " + user.nama, Toast.LENGTH_SHORT).show()

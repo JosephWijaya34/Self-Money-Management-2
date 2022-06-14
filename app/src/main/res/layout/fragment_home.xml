@@ -27,10 +27,12 @@
                     android:id="@+id/homeWelcomeUser_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="35dp"
+                    android:layout_marginEnd="63dp"
                     android:text="Selamat Pagi User"
                     android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/userHome_cardView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,10 +40,12 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="97dp"
                     android:text="Siap  Menabung ?"
                     android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/userHome_cardView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homeWelcomeUser_textView" />
 
