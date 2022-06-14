@@ -46,44 +46,50 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/registerCardView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="56dp"
-        app:cardCornerRadius="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/gotoregister_button"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
+            android:gravity="center"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text="Daftar"
-            android:gravity="center"
             android:textColor="#000000"
             app:cornerRadius="0dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loginCardView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toEndOf="@+id/registerCardView"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/gotologin_button"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#3B3A41"
+            android:gravity="center"
             android:insetTop="0dp"
             android:insetBottom="0dp"
-            android:text="Masuk"
-            android:gravity="center"/>
+            android:text="Masuk" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

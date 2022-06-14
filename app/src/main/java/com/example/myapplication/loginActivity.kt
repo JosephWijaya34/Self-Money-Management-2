@@ -27,6 +27,7 @@ class loginActivity : AppCompatActivity() {
 
         listener()
         checkInput()
+        goToRegister()
     }
 
     private fun listener() {
@@ -45,6 +46,7 @@ class loginActivity : AppCompatActivity() {
                 ind++
             }
             if (check == true) {
+                finish()
                 arrayListUser.indexUser = ind
                 val intent=Intent(this, MainActivity::class.java)
                 intent.putExtra("user", user)
@@ -87,6 +89,14 @@ class loginActivity : AppCompatActivity() {
                 viewBind.loginPageButton.isEnabled=true
                 viewBind.loginPageButton.setBackgroundColor(Color.WHITE)
             }
+        }
+    }
+
+    private fun goToRegister(){
+        viewBind.gotoRegisterTextView.setOnClickListener {
+            val intent=Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

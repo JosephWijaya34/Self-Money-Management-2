@@ -27,6 +27,7 @@ class homeActivity : AppCompatActivity() {
             }
             myIntent.flags=Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(myIntent)
+
         }
     }
     private fun pindahLogin(){
@@ -36,6 +37,7 @@ class homeActivity : AppCompatActivity() {
             }
             myIntent.flags=Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(myIntent)
+
         }
     }
 }

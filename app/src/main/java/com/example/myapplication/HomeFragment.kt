@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
         var indexUserHome = arrayListUser.indexUser
         var user = arrayListUser.users.get(indexUserHome).nama
         val currentHour = Calendar.getInstance().get(Calendar.HOUR)
-        viewBind.homeWelcomeUserTextView.text = if (currentHour > 20 && currentHour < 4) {("Malam " + user)}
+        viewBind.homeWelcomeUserTextView.text = if (currentHour > 18 && currentHour < 4) {("Malam " + user)}
         else if (currentHour > 12 && currentHour < 15) {("Siang " + user)}
         else {("Pagi " + user)}
     }
