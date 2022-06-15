@@ -14,30 +14,43 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".DetailProfil"
+            android:name=".TambahAutoMaticManageActivity"
             android:exported="true" >
+        </activity>
+        <activity
+            android:name=".DeleteUserActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DetailProfil"
+            android:exported="true">
+
+
 
         </activity>
         <activity
             android:name=".SignUpActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="true" >
+
+
+        </activity>
         <activity
             android:name=".loginActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".homeActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <meta-data

@@ -23,6 +23,7 @@ class SettingsFragment : Fragment() {
         showUser()
         backSetting()
         ubahPWD()
+        hapusAkun()
         logOut()
         return viewBind.root
     }
@@ -30,7 +31,7 @@ class SettingsFragment : Fragment() {
     private fun backSetting() {
         viewBind.backSetting.setOnClickListener {
             val myIntent =
-                Intent(this@SettingsFragment.requireContext(), MainActivity  ::class.java)
+                Intent(this@SettingsFragment.requireContext(), MainActivity::class.java)
             startActivity(myIntent)
             activity?.finish()
         }
@@ -45,6 +46,22 @@ class SettingsFragment : Fragment() {
         }
     }
 
+    private fun hapusAkun() {
+        viewBind.hapusAkunCardView.setOnClickListener {
+            val myIntent =
+                Intent(this@SettingsFragment.requireContext(), DeleteUserActivity::class.java)
+
+            startActivity(myIntent)
+        }
+
+    }
+
+    private fun showUser() {
+        var indexUserSetting = arrayListUser.indexUser
+        viewBind.namaTextView.text = arrayListUser.users.get(indexUserSetting).nama
+        viewBind.emailTextView.text = arrayListUser.users.get(indexUserSetting).email
+    }
+
     private fun logOut() {
         viewBind.logoutButton.setOnClickListener {
             val myIntent =
@@ -53,11 +70,5 @@ class SettingsFragment : Fragment() {
             activity?.finish()
 
         }
-    }
-
-    private fun showUser() {
-        var indexUserSetting = arrayListUser.indexUser
-        viewBind.namaTextView.text = arrayListUser.users.get(indexUserSetting).nama
-        viewBind.emailTextView.text = arrayListUser.users.get(indexUserSetting).email
     }
 }

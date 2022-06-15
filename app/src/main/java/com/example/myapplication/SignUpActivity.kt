@@ -35,7 +35,6 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun checker() {
         var isCompleted=true
-
         //nama
         if (user.nama?.isEmpty() == true) {
             viewBind.namaTextInputLayout.error="Tolong isi kolom nama"
