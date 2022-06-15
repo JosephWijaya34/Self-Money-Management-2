@@ -30,7 +30,6 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="35dp"
                     android:layout_marginEnd="63dp"
-                    android:text="Selamat Pagi User"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/userHome_cardView"
@@ -89,7 +88,7 @@
                         android:layout_height="250dp">
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/total"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="30dp"
@@ -99,7 +98,7 @@
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/namaApp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="30dp"
@@ -131,10 +130,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/saldoHome_cardView">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -162,7 +157,7 @@
                                     android:padding="3dp">
 
                                     <TextView
-                                        android:id="@+id/textView15"
+                                        android:id="@+id/pengeluarahHome"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Pengeluaran"
@@ -170,7 +165,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/textView16"
+                                        android:id="@+id/pengtotHome_textView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Rp 100.000,00"
@@ -179,11 +174,11 @@
                                         app:layout_constraintStart_toStartOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/textView17"
+                                        android:id="@+id/pengtotbox"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Total Pengeluaran"
-                                        app:layout_constraintBottom_toTopOf="@+id/textView16"
+                                        app:layout_constraintBottom_toTopOf="@+id/pengtotHome_textView"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -213,16 +208,16 @@
                                     android:padding="3dp">
 
                                     <TextView
-                                        android:id="@+id/textView20"
+                                        android:id="@+id/pemtotbox"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Total Pengeluaran"
-                                        app:layout_constraintBottom_toTopOf="@+id/textView19"
+                                        android:text="Total Pemasukan"
+                                        app:layout_constraintBottom_toTopOf="@+id/pemtotHome_textView"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/textView19"
+                                        android:id="@+id/pemtotHome_textView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Rp 100.000,00"
@@ -231,7 +226,7 @@
                                         app:layout_constraintStart_toStartOf="parent" />
 
                                     <TextView
-                                        android:id="@+id/textView18"
+                                        android:id="@+id/pemasukanHome"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Pemasukan"

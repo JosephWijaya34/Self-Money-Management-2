@@ -4,52 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahAutoMaticManageActivity">
+    tools:context=".TambahPemasukanActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/uangbulanan_cardView"
+        android:id="@+id/nominalPemasukan_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="30dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="25dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/uangBulanan_textInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FFFFFF"
-                android:hint="Uang Bulanan"
-                android:inputType="phone" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/presentaseYGdiTabung_cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uangbulanan_cardView">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/presentaseYGdiTabung_textInputLayout"
+            android:id="@+id/nominalPemasukan_textInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -57,81 +28,86 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFFFFF"
-                android:hint="Presentase yang di simpan"
-                android:inputType="phone" />
+                android:hint="Nominal"
+                android:inputType="number|phone" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/dropdownAM_cardView"
-        android:layout_width="0dp"
+        android:id="@+id/tanggalPemasukan_cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="25dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/presentaseYGdiTabung_cardView">
+        app:layout_constraintTop_toBottomOf="@+id/nominalPemasukan_cardView">
 
-        <Spinner
-            android:id="@+id/dropdown"
-            style=""
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tanggalPemasukan_textInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:hint="Tanggal" />
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/show"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/catatanPemasukan_cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tanggalPemasukan_cardView">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/catatanPemasukan_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:hint="Catatan" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/hitung_button"
+        android:id="@+id/simpanPemasukan_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
-        android:text="hitung"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#8BC34A"
+        android:text="Simpan"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dropdownAM_cardView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/texthasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hitung_button" />
-
-    <TextView
-        android:id="@+id/hasil_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texthasil" />
-
-    <ImageView
-        android:id="@+id/back_MM"
+    <ImageButton
+        android:id="@+id/backPemasukan_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:backgroundTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow" />
-
-
+        app:srcCompat="@drawable/ic_arrow"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

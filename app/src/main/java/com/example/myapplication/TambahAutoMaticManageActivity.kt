@@ -60,7 +60,7 @@ class TambahAutoMaticManageActivity : AppCompatActivity() {
                 result.text = ""
             }
         }
-
+        //function
         listener()
         checkInput()
         back()

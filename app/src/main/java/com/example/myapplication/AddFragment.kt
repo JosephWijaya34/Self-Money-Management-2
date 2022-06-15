@@ -20,14 +20,29 @@ class AddFragment : Fragment() {
         // Inflate the layout for this fragment
         viewBind=FragmentAddBinding.inflate(layoutInflater, container, false)
 
-        moveAutoManage()
+        move()
 
         return viewBind.root
     }
 
-    private fun moveAutoManage() {
+    private fun move() {
         viewBind.automaticAddCardView.setOnClickListener {
             val myIntent= Intent(this@AddFragment.requireContext(), TambahAutoMaticManageActivity::class.java)
+
+            startActivity(myIntent)
+        }
+        viewBind.pengeluaranAddCardView.setOnClickListener{
+            val myIntent= Intent(this@AddFragment.requireContext(), TambahPengeluaranActivity::class.java)
+
+            startActivity(myIntent)
+        }
+        viewBind.pemasukanAddCardView.setOnClickListener{
+            val myIntent= Intent(this@AddFragment.requireContext(), TambahPemasukanActivity::class.java)
+
+            startActivity(myIntent)
+        }
+        viewBind.aPlanMakerAddCardView.setOnClickListener{
+            val myIntent= Intent(this@AddFragment.requireContext(), TambahPemasukanActivity::class.java)
 
             startActivity(myIntent)
         }

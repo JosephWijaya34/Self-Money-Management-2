@@ -14,6 +14,7 @@ import com.example.myapplication.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var viewBind: FragmentHomeBinding
+
     @RequiresApi(Build.VERSION_CODES.N)
 
     override fun onCreateView(
@@ -24,27 +25,65 @@ class HomeFragment : Fragment() {
         viewBind=FragmentHomeBinding.inflate(layoutInflater, container, false)
 
         welcome()
-
+        showData()
         tryMove()
 
         return viewBind.root
     }
+
     //    kondisi pagi siang malam
     @RequiresApi(Build.VERSION_CODES.N)
     private fun welcome() {
-        var indexUserHome = arrayListUser.indexUser
-        var user = arrayListUser.users.get(indexUserHome).nama
-        val currentHour = Calendar.getInstance().get(Calendar.HOUR)
-        viewBind.homeWelcomeUserTextView.text = if (currentHour > 18 && currentHour < 4) {("Malam " + user)}
-        else if (currentHour > 12 && currentHour < 15) {("Siang " + user)}
-        else {("Pagi " + user)}
+        var indexUserHome=arrayListUser.indexUser
+        var user=arrayListUser.users.get(indexUserHome).nama
+        val currentHour=Calendar.getInstance().get(Calendar.HOUR)
+        viewBind.homeWelcomeUserTextView.text=if (currentHour > 18 && currentHour < 4) {
+            ("Malam " + user)
+        } else if (currentHour > 12 && currentHour < 15) {
+            ("Siang " + user)
+        } else {
+            ("Pagi " + user)
+        }
     }
 
     private fun tryMove() {
         viewBind.pemasukanHomeCardView.setOnClickListener {
-            val myIntent=Intent(this@HomeFragment.requireContext(), homeActivity::class.java)
+            val myIntent=
+                Intent(this@HomeFragment.requireContext(), RecyclerViewActivity::class.java).apply {
+                    putExtra("from", "Pemasukan")
+                }
+            startActivity(myIntent)
+        }
+        viewBind.pengeluaranHomeCardView.setOnClickListener {
+            val myIntent=
+                Intent(this@HomeFragment.requireContext(), RecyclerViewActivity::class.java).apply {
+                    putExtra("from", "Pengeluaran")
+                }
 
             startActivity(myIntent)
         }
+    }
+
+    private fun showData() {
+        var indexUserHome=arrayListUser.indexUser
+        var pemtot=0
+        var pengtot=0
+        for (i in arrayListUser.users.get(indexUserHome).uanglist) {
+            if (i.pengenal.equals("pengeluaran")) {
+                pengtot+=i.jumlahUang
+            } else if (i.pengenal.equals("pemasukan")) {
+                pemtot+=i.jumlahUang
+            }
+
+        }
+        viewBind.pemtotHomeTextView.text=pemtot.toString()
+        viewBind.pengtotHomeTextView.text=pengtot.toString()
+        var totalSaldo=pemtot - pengtot
+        viewBind.totalBalanceHomeTextView.text=totalSaldo.toString()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showData()
     }
 }

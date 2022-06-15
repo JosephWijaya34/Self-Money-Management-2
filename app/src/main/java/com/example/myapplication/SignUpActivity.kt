@@ -29,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
             var password=viewBind.passwordTextInputLayout.editText?.text!!.toString().trim()
 
             user=User(nama, email, password)
+
             checker()
         }
     }
@@ -38,6 +39,7 @@ class SignUpActivity : AppCompatActivity() {
         //nama
         if (user.nama?.isEmpty() == true) {
             viewBind.namaTextInputLayout.error="Tolong isi kolom nama"
+            isCompleted=false
         } else {
             viewBind.namaTextInputLayout.error=""
         }
