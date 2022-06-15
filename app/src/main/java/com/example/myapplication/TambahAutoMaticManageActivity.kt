@@ -111,22 +111,22 @@ class TambahAutoMaticManageActivity : AppCompatActivity() {
                     waktu = 7
                     hasil = uangpakai / waktu
 //                    hasil = uangsimpan.toDouble()
-                    viewBind.hasilTextView.text = hasil.convertRupiah()
+                    viewBind.hasilTextView.text = hasil.convertRupiah() + " /hari"
                 } else if (minggu.equals("2 Minggu")) {
                     viewBind.texthasil.text = "Hasil Hitungan 2 Minggu"
                     waktu = 14
                     hasil = uangpakai / waktu
-                    viewBind.hasilTextView.text = hasil.convertRupiah()
+                    viewBind.hasilTextView.text = hasil.convertRupiah() + " /hari"
                 } else if (minggu.equals("3 Minggu")) {
                     viewBind.texthasil.text = "Hasil Hitungan 3 Minggu"
                     waktu = 21
                     hasil = uangpakai / waktu
-                    viewBind.hasilTextView.text = hasil.convertRupiah()
+                    viewBind.hasilTextView.text = hasil.convertRupiah() + " /hari"
                 } else if (minggu.equals("4 Minggu")) {
                     viewBind.texthasil.text = "Hasil Hitungan 4 Minggu"
                     waktu = 28
                     hasil = uangpakai / waktu
-                    viewBind.hasilTextView.text = hasil.convertRupiah()
+                    viewBind.hasilTextView.text = hasil.convertRupiah() + " /hari"
                 }
             }
         }

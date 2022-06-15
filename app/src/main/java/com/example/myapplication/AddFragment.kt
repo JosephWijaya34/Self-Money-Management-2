@@ -41,10 +41,10 @@ class AddFragment : Fragment() {
 
             startActivity(myIntent)
         }
-        viewBind.aPlanMakerAddCardView.setOnClickListener{
-            val myIntent= Intent(this@AddFragment.requireContext(), TambahPemasukanActivity::class.java)
-
-            startActivity(myIntent)
-        }
+//        viewBind.aPlanMakerAddCardView.setOnClickListener{
+//            val myIntent= Intent(this@AddFragment.requireContext(), TambahPemasukanActivity::class.java)
+//
+//            startActivity(myIntent)
+//        }
     }
 }

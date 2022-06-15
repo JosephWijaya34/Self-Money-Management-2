@@ -6,11 +6,14 @@ import Model.User
 import ModelUang.Pengeluaran
 import ModelUang.Uang
 import android.content.Intent
+import android.icu.text.NumberFormat
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.ActivityRecyclerViewBinding
+import java.util.*
+import kotlin.collections.ArrayList
 
 class RecyclerViewActivity : AppCompatActivity(), CardListener {
 
@@ -21,6 +24,12 @@ class RecyclerViewActivity : AppCompatActivity(), CardListener {
     private var dataPemasukan=ArrayList<Uang>()
     private var dataPengeluaran=ArrayList<Uang>()
 
+    fun Any.convertRupiah(): String {
+        val localId = Locale("in", "ID")
+        val formatter = NumberFormat.getCurrencyInstance(localId)
+        val strFormat = formatter.format(this)
+        return strFormat
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBind=ActivityRecyclerViewBinding.inflate(layoutInflater)
@@ -71,7 +80,7 @@ class RecyclerViewActivity : AppCompatActivity(), CardListener {
         if (fromActivity.equals("Pengeluaran")) {
             viewBind.titleRVTextView.text="Pengeluaran Kamu"
             viewBind.kategoriRVTextView.text="Kategori"
-            viewBind.totalRVTextView.text=pengtot.toString()
+            viewBind.totalRVTextView.text=pengtot.convertRupiah()
             viewBind.addRVButton.setOnClickListener {
                 val myIntent=Intent(this, TambahPengeluaranActivity::class.java)
                 startActivity(myIntent)
@@ -79,7 +88,7 @@ class RecyclerViewActivity : AppCompatActivity(), CardListener {
         } else {
             viewBind.titleRVTextView.text="Pemasukan Kamu"
             viewBind.kategoriRVTextView.text="Catatan"
-            viewBind.totalRVTextView.text=pemtot.toString()
+            viewBind.totalRVTextView.text=pemtot.convertRupiah()
             viewBind.addRVButton.setOnClickListener {
                 val myIntent=Intent(this, TambahPemasukanActivity::class.java)
                 startActivity(myIntent)

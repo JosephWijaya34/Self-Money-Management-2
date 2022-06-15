@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.icu.text.NumberFormat
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.FragmentHomeBinding
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -17,6 +19,12 @@ class HomeFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.N)
 
+    fun Any.convertRupiah(): String {
+        val localId = Locale("in", "ID")
+        val formatter = NumberFormat.getCurrencyInstance(localId)
+        val strFormat = formatter.format(this)
+        return strFormat
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -76,10 +84,10 @@ class HomeFragment : Fragment() {
             }
 
         }
-        viewBind.pemtotHomeTextView.text=pemtot.toString()
-        viewBind.pengtotHomeTextView.text=pengtot.toString()
+        viewBind.pemtotHomeTextView.text=pemtot.convertRupiah()
+        viewBind.pengtotHomeTextView.text=pengtot.convertRupiah()
         var totalSaldo=pemtot - pengtot
-        viewBind.totalBalanceHomeTextView.text=totalSaldo.toString()
+        viewBind.totalBalanceHomeTextView.text=totalSaldo.convertRupiah()
     }
 
     override fun onResume() {
